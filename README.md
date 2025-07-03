@@ -1,37 +1,49 @@
-# 📚 BookApplication
+# 📚 Book Management REST API
 
-A simple Book Management REST API built using Java, Spring Boot, and H2 Database.
+A simple Spring Boot project for managing books using a RESTful architecture. Includes full CRUD functionality, uses H2 in-memory database, and has been tested with Postman.
 
-## 🔧 Tech Stack
-- Java
-- Spring Boot
-- Spring Data JPA
-- H2 In-Memory DB
-- Maven
-- Postman
+---
 
-## 🚀 Features
-- Add a book
-- Get a book by title
-- Update book details
-- Delete a book
+## 🚀 Tech Stack
 
-## 🛠️ Endpoints
+- **Java 17**
+- **Spring Boot 3.5**
+- **Spring Data JPA**
+- **H2 Database**
+- **Postman**
+- **Maven**
 
-| Method | Endpoint               | Description         |
-|--------|------------------------|---------------------|
-| POST   | `/book/v1/addBook`     | Add a new book      |
-| GET    | `/book/v1/getBook/{title}` | Get book by title   |
-| PUT    | `/book/v1/updateBook`  | Update a book       |
-| DELETE | `/book/v1/deleteBook/{id}` | Delete a book by ID |
+---
 
-## 🧪 Testing
-Tested using [Postman](https://www.postman.com/). Sample JSON for add/update:
+## 📌 Features
+
+- ➕ Add new books
+- 🔍 Get books by title
+- 📝 Update book information
+- ❌ Delete books by ID
+- 📋 Auto database management using JPA Repository
+- 💾 Test APIs using Postman
+- 🖥️ View database in browser using H2 Console
+
+---
+
+## 🛠️ API Endpoints
+
+| Method | Endpoint                         | Description              |
+|--------|----------------------------------|--------------------------|
+| POST   | `/book/v1/addBook`               | Add a new book           |
+| GET    | `/book/v1/getBook/{bookName}`    | Get a book by its title  |
+| PUT    | `/book/v1/updateBook`            | Update a book            |
+| DELETE | `/book/v1/deleteBook/{id}`       | Delete a book by ID      |
+
+---
+
+## 📥 Sample JSON
 
 ```json
 {
   "id": 1,
   "title": "The Alchemist",
   "author": "Paulo Coelho",
-  "price": 299
+  "price": 399
 }
